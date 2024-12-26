@@ -24,3 +24,17 @@
   margin: 0 0 16px 0;
   text-align: center;
 }
+
+@media screen and (max-width: 1279px) {
+  .chart_title {
+    font-size: 22px;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .app_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
