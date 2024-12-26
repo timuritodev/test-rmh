@@ -1,5 +1,6 @@
 import { BarChart, Bar, XAxis, YAxis } from 'recharts';
 import { DataPoint } from '../../../types/data.types';
+import { FC } from 'react';
 
 interface BarChartProps {
     data: DataPoint[];
@@ -7,7 +8,7 @@ interface BarChartProps {
     height: number;
 }
 
-export const BarChartComponent: React.FC<BarChartProps> = ({ data, width, height }) => (
+export const BarChartComponent: FC<BarChartProps> = ({ data, width, height }) => (
     <BarChart width={width} height={height} data={data}>
         <XAxis dataKey="category" />
         <YAxis />

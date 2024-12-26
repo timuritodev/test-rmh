@@ -1,5 +1,6 @@
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 import { DataPoint } from '../../../types/data.types';
+import { FC } from 'react';
 
 interface LineChartProps {
     data: DataPoint[];
@@ -7,7 +8,7 @@ interface LineChartProps {
     height: number;
 }
 
-export const LineChartComponent: React.FC<LineChartProps> = ({ data, width, height }) => (
+export const LineChartComponent: FC<LineChartProps> = ({ data, width, height }) => (
     <LineChart width={width} height={height} data={data}>
         <XAxis dataKey="date" />
         <YAxis />
