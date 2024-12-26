@@ -1,0 +1,17 @@
+[
+    {
+        "date": "2024-01-01",
+        "category": "A",
+        "value": 100
+    },
+    {
+        "date": "2024-01-02",
+        "category": "B",
+        "value": 200
+    },
+    {
+        "date": "2024-01-03",
+        "category": "A",
+        "value": 150
+    }
+]
