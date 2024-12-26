@@ -3,11 +3,13 @@ import { DataPoint } from '../../../types/data.types';
 
 interface PieChartProps {
     data: DataPoint[];
+    width: number;
+    height: number;
 }
 
-const PieChartComponent: React.FC<PieChartProps> = ({ data }) => {
+const PieChartComponent: React.FC<PieChartProps> = ({ data, width, height }) => {
     return (
-        <PieChart width={400} height={400}>
+        <PieChart width={width} height={height}>
             <Pie data={data} dataKey="value" fill="#8884d8" />
             <Tooltip />
         </PieChart>
