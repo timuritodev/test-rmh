@@ -8,6 +8,7 @@ import { LineChartComponent } from './components/charts/line/LineChart';
 import { PieChartComponent } from './components/charts/pie/PieChart';
 import { DateFilter } from './components/filter/date/DateFilter';
 import { FiltrationComponent } from './components/filter/filtration/FiltrationComponent';
+import { SortComponent } from './components/filter/sort/SortComponent';
 
 export const App = () => {
   const chartWidth = useChartWidth();
@@ -18,6 +19,7 @@ export const App = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc' | null>(null);
 
   const categories = Array.from(new Set(mockData.map((item) => item.category)));
 
@@ -28,8 +30,15 @@ export const App = () => {
         (!startDate || itemDate >= startDate) &&
         (!endDate || itemDate <= endDate);
       const categoryMatch = !selectedCategory || category === selectedCategory;
-      return dateRange && categoryMatch;
+      return dateRange && categoryMatch
     });
+
+  const sortedData =
+    sortOrder === 'asc'
+      ? [...filteredData].sort((a, b) => a.value - b.value)
+      : sortOrder === 'desc'
+        ? [...filteredData].sort((a, b) => b.value - a.value)
+        : filteredData;
 
   return (
     <div className="app">
@@ -45,19 +54,23 @@ export const App = () => {
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
         />
+        <SortComponent
+          sortOrder={sortOrder}
+          onSortOrderChange={setSortOrder}
+        />
       </div>
       <div className="charts_container">
         <div className="chart">
           <h3 className="chart_title">Линейный график</h3>
-          <LineChartComponent data={filteredData} width={width} height={300} />
+          <LineChartComponent data={sortedData} width={width} height={300} />
         </div>
         <div className="chart">
           <h3 className="chart_title">Столбчатая диаграмма</h3>
-          <BarChartComponent data={filteredData} width={width} height={300} />
+          <BarChartComponent data={sortedData} width={width} height={300} />
         </div>
         <div className="chart">
           <h3 className="chart_title">Круговая диаграмма</h3>
-          <PieChartComponent data={filteredData} width={width} height={300} />
+          <PieChartComponent data={sortedData} width={width} height={300} />
         </div>
       </div>
     </div>
