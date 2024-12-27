@@ -7,7 +7,7 @@ interface SortProps {
 }
 
 export const SortComponent: FC<SortProps> = ({ sortOrder, onSortOrderChange }) => (
-    <div className="filter_container">
+    <div>
         <label className="filter_label">Пордядок сортировки:</label>
         <select
             className="container"

@@ -14,7 +14,7 @@ export const App = () => {
   const chartWidth = useChartWidth();
   const pageWidth = useResize();
 
-  const width = pageWidth > 1024 ? chartWidth : pageWidth * 0.9;
+  const width = pageWidth < 1022 ? pageWidth * 0.9 : chartWidth;
 
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [endDate, setEndDate] = useState<Date | null>(null);
@@ -42,22 +42,24 @@ export const App = () => {
 
   return (
     <div className="app">
-      <div>
+      <div className='filters_container'>
         <DateFilter
           startDate={startDate}
           endDate={endDate}
           onStartDateChange={setStartDate}
           onEndDateChange={setEndDate}
         />
-        <FiltrationComponent
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
-        <SortComponent
-          sortOrder={sortOrder}
-          onSortOrderChange={setSortOrder}
-        />
+        <div>
+          <FiltrationComponent
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
+          <SortComponent
+            sortOrder={sortOrder}
+            onSortOrderChange={setSortOrder}
+          />
+        </div>
       </div>
       <div className="charts_container">
         <div className="chart">

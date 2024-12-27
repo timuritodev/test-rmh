@@ -12,7 +12,7 @@ export const FiltrationComponent: FC<FiltrationComponentProps> = ({
     selectedCategory,
     onCategoryChange,
 }) => (
-    <div className="filter_container">
+    <div>
         <label className='filter_label'>По категориям:</label>
         <select
             className='container'
