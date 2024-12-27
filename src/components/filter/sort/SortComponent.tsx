@@ -1,4 +1,5 @@
 import { FC } from "react";
+import '../styles.css';
 
 interface SortProps {
     sortOrder: 'asc' | 'desc' | null;
@@ -6,9 +7,10 @@ interface SortProps {
 }
 
 export const SortComponent: FC<SortProps> = ({ sortOrder, onSortOrderChange }) => (
-    <div className="sort_container">
-        <label>Пордядок сортировки:</label>
+    <div className="filter_container">
+        <label className="filter_label">Пордядок сортировки:</label>
         <select
+            className="container"
             value={sortOrder || ''}
             onChange={(e) =>
                 onSortOrderChange(e.target.value ? (e.target.value as 'asc' | 'desc') : null)

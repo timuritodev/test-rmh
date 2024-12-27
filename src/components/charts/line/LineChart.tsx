@@ -1,4 +1,4 @@
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { DataPoint } from '../../../types/data.types';
 import { FC } from 'react';
 
@@ -14,5 +14,6 @@ export const LineChartComponent: FC<LineChartProps> = ({ data, width, height }) 
         <YAxis />
         <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
         <Line type="monotone" dataKey="value" />
+        <Tooltip />
     </LineChart>
 );

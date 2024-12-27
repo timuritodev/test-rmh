@@ -1,4 +1,4 @@
-import './FiltrationComponent.css';
+import '../styles.css';
 import { FC } from 'react';
 
 interface FiltrationComponentProps {
@@ -13,8 +13,9 @@ export const FiltrationComponent: FC<FiltrationComponentProps> = ({
     onCategoryChange,
 }) => (
     <div className="filter_container">
-        <label>По категориям:</label>
+        <label className='filter_label'>По категориям:</label>
         <select
+            className='container'
             value={selectedCategory || ''}
             onChange={(e) => onCategoryChange(e.target.value || null)}
         >

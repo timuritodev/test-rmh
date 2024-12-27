@@ -1,0 +1,16 @@
+.filter_label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.container {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+}

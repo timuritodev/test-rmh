@@ -1,4 +1,4 @@
-import './DateFilter.css';
+import '../styles.css';
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import { FC } from 'react';
@@ -18,19 +18,21 @@ export const DateFilter: FC<DateFilterProps> = ({
 }) => {
     return (
         <div className="filter_container">
-            <label>Дата начала:</label>
+            <label className='filter_label'>Дата начала:</label>
             <DatePicker
                 selected={startDate}
                 onChange={onStartDateChange}
                 dateFormat="yyyy-MM-dd"
                 placeholderText='yyyy-mm-dd'
+                className='container'
             />
-            <label>Дата окончания:</label>
+            <label className='filter_label'>Дата окончания:</label>
             <DatePicker
                 selected={endDate}
                 onChange={onEndDateChange}
                 dateFormat="yyyy-MM-dd"
                 placeholderText='yyyy-mm-dd'
+                className='container'
             />
         </div>
     );

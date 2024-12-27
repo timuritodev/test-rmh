@@ -1,6 +1,7 @@
-import { PieChart, Pie, Tooltip } from 'recharts';
+import { PieChart, Pie, Tooltip, Cell } from 'recharts';
 import { DataPoint } from '../../../types/data.types';
 import { FC } from 'react';
+import { CATEGORY_COLORS } from '../../../constants/colors';
 
 interface PieChartProps {
     data: DataPoint[];
@@ -11,10 +12,15 @@ interface PieChartProps {
 export const PieChartComponent: FC<PieChartProps> = ({ data, width, height }) => {
     return (
         <PieChart width={width} height={height}>
-            <Pie data={data} dataKey="value" fill="#8884d8" />
+            <Pie data={data} dataKey="value">
+                {data.map((item, index) => (
+                    <Cell
+                        key={`cell-${index}`}
+                        fill={CATEGORY_COLORS[item.category] || '#ccc'}
+                    />
+                ))}
+            </Pie>
             <Tooltip />
         </PieChart>
     );
 };
-
-// добавить сюда диаграмму со складыванием всех категорий 
