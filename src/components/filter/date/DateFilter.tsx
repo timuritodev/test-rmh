@@ -23,12 +23,14 @@ export const DateFilter: FC<DateFilterProps> = ({
                 selected={startDate}
                 onChange={onStartDateChange}
                 dateFormat="yyyy-MM-dd"
+                placeholderText='yyyy-mm-dd'
             />
             <label>Дата окончания:</label>
             <DatePicker
                 selected={endDate}
                 onChange={onEndDateChange}
                 dateFormat="yyyy-MM-dd"
+                placeholderText='yyyy-mm-dd'
             />
         </div>
     );

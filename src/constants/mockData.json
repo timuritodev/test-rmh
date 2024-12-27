@@ -18,5 +18,120 @@
         "date": "2024-01-04",
         "category": "C",
         "value": 350
+    },
+    {
+        "date": "2024-01-05",
+        "category": "C",
+        "value": 308
+    },
+    {
+        "date": "2024-01-06",
+        "category": "B",
+        "value": 265
+    },
+    {
+        "date": "2024-01-07",
+        "category": "B",
+        "value": 316
+    },
+    {
+        "date": "2024-01-08",
+        "category": "B",
+        "value": 422
+    },
+    {
+        "date": "2024-01-09",
+        "category": "A",
+        "value": 115
+    },
+    {
+        "date": "2024-01-10",
+        "category": "D",
+        "value": 458
+    },
+    {
+        "date": "2024-01-11",
+        "category": "B",
+        "value": 402
+    },
+    {
+        "date": "2024-01-12",
+        "category": "C",
+        "value": 220
+    },
+    {
+        "date": "2024-01-13",
+        "category": "B",
+        "value": 153
+    },
+    {
+        "date": "2024-01-14",
+        "category": "D",
+        "value": 303
+    },
+    {
+        "date": "2024-01-15",
+        "category": "C",
+        "value": 218
+    },
+    {
+        "date": "2024-01-16",
+        "category": "D",
+        "value": 357
+    },
+    {
+        "date": "2024-01-17",
+        "category": "D",
+        "value": 130
+    },
+    {
+        "date": "2024-01-18",
+        "category": "C",
+        "value": 159
+    },
+    {
+        "date": "2024-01-19",
+        "category": "C",
+        "value": 224
+    },
+    {
+        "date": "2024-01-20",
+        "category": "C",
+        "value": 158
+    },
+    {
+        "date": "2024-01-21",
+        "category": "C",
+        "value": 412
+    },
+    {
+        "date": "2024-01-22",
+        "category": "C",
+        "value": 358
+    },
+    {
+        "date": "2024-01-23",
+        "category": "C",
+        "value": 277
+    },
+    {
+        "date": "2024-01-24",
+        "category": "B",
+        "value": 245
+    },
+    {
+        "date": "2024-01-25",
+        "category": "B",
+        "value": 192
+    },
+    {
+        "date": "2024-01-26",
+        "category": "A",
+        "value": 411
+    },
+    {
+        "date": "2024-01-27",
+        "category": "A",
+        "value": 295
     }
 ]

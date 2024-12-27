@@ -1,14 +1,21 @@
-.app_container {
+.app {
+  height: 100vh;
+  font-size: 20px;
+  justify-items: center;
+}
+
+.charts_container {
+  margin: 100px 0;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   align-items: center;
-  height: 100vh;
 }
 
-.chart_container {
+.chart {
   background-color: #334155;
   padding: 10px;
   border-radius: 8px;
